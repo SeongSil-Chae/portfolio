@@ -29,7 +29,9 @@
     }
     header p {
       font-size: 1.2rem;
-      opacity: 0.9;
+      opacity: 0.95;
+      max-width: 700px;
+      margin: 0 auto;
     }
     .container {
       max-width: 960px;
@@ -72,6 +74,14 @@
     .contact a:hover {
       text-decoration: underline;
     }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    td, th {
+      padding: 8px;
+      border-bottom: 1px solid #ccc;
+    }
     footer {
       text-align: center;
       padding: 20px;
@@ -82,60 +92,93 @@
 </head>
 <body>
   <header>
-    <h1>채성실</h1>
-    <p>신입 백엔드 개발자 · 프로젝트 설계부터 구현까지 주도하는 실전형 인재</p>
+    <h1>👋 안녕하세요, 신입 백엔드 개발자 채성실입니다!</h1>
+    <p>8년간 정부지원 IT교육 행정 실무를 총괄하며 <strong>기획력과 실행력</strong>을 쌓아왔고,<br>
+    현재는 실무 중심의 프로젝트 경험을 통해 <strong>개발자로서의 전문성</strong>을 키워가고 있습니다.<br>
+    특히, <strong>그룹웨어 시스템(7FS) 프로젝트</strong>에서 기획부터 개발, UI/UX, 배포까지 전 과정을 경험했습니다.</p>
   </header>
 
   <main class="container">
     <section class="section">
-      <h2>회사 / 개발 경력</h2>
+      <h2>🧑‍💻 주요 프로젝트</h2>
+      <div class="project">
+        <strong>🚀 <a href="https://github.com/SeongSil-Chae/sevenfs-groupware" target="_blank">7FS 그룹웨어 협업 시스템</a></strong>
+        <ul>
+          <li><strong>담당 역할</strong>: 프로젝트 관리 모듈 전담 개발, UI/UX 기획, 구조 설계</li>
+          <li><strong>주요 기능</strong>:
+            <ul>
+              <li>5단계 입력폼, 조직도 연동, 파일 업로드 포함한 프로젝트 등록/수정</li>
+              <li>업무 계층 구조, 피드백 댓글 및 실시간 알림 (WebSocket)</li>
+              <li>Gantt 차트(DHTMLX API), Kanban 보드 (Drag&Drop)</li>
+              <li>SPA 유사 Ajax 구조 설계</li>
+              <li>엑셀 다운로드, 권한별 접근 제어, VO 분리 설계(GanttTaskVO / KanbanTaskVO 등)</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <strong>✈️ J가 되고 싶은 P - 여행 계획 사이트</strong>
+        <ul>
+          <li><strong>담당 역할</strong>: 부팀장 / TA, 결제·장바구니·리뷰·회원관리 등 담당</li>
+          <li><strong>기술 경험</strong>: KakaoPay API, 댓글 계층 구조, SPA 유사 Ajax 처리</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>💼 경력 요약</h2>
+      <table>
+        <tr><th>기간</th><th>소속</th><th>주요 업무</th></tr>
+        <tr><td>2016.10 ~ 2023.05</td><td>SBS아카데미컴퓨터아트학원</td><td>정부지원 사업 기획 및 운영 행정</td></tr>
+        <tr><td>2023.06 ~ 2024.09</td><td>미래융합교육원</td><td>직업훈련 운영 및 기업 협업 기획</td></tr>
+      </table>
+    </section>
+
+    <section class="section">
+      <h2>🛠 기술 스택</h2>
       <ul>
-        <li>정부지원 IT교육 운영 행정 8년</li>
-        <li>풀스택 개발자 양성과정 수료 (1240시간)</li>
-        <li>팀 프로젝트에서 기획, 설계, 개발 전 과정을 주도하며 리더십 발휘</li>
+        <li><strong>Backend</strong>: Java, Spring Boot, MyBatis, JSP</li>
+        <li><strong>Frontend</strong>: HTML5, CSS3, JavaScript, Bootstrap, jQuery, React</li>
+        <li><strong>Database</strong>: Oracle, SQL Developer</li>
+        <li><strong>Infra / Tools</strong>: GitHub, Notion, Redmine, SVN, AWS, Docker</li>
+        <li><strong>기타 경험</strong>: WebSocket, DHTMLX Gantt, SweetAlert, Apache POI (엑셀)</li>
       </ul>
     </section>
 
     <section class="section">
-      <h2>진행 프로젝트</h2>
-      <div class="project">
-        <strong>[7FS 그룹웨어 시스템]</strong><br>
-        <p>기업 내 협업을 위한 웹 기반 그룹웨어 시스템</p>
-        <div>
-          <span class="tag">Spring Boot</span><span class="tag">JSP</span><span class="tag">MyBatis</span><span class="tag">Gantt</span><span class="tag">WebSocket</span>
-        </div>
-        <ul>
-          <li>프로젝트 등록, 업무 계층 구조, 대시보드, 칸반보드, 실시간 피드백/알림 구현</li>
-          <li>SPA 유사한 Ajax 구조 설계, 권한 관리, 엑셀 다운로드 등 실무 기능 강화</li>
-        </ul>
-      </div>
-
-      <div class="project">
-        <strong>[J가 되고 싶은 P - 여행계획 사이트]</strong><br>
-        <p>트리플 앱을 벤치마킹한 여행 계획 웹서비스</p>
-        <div>
-          <span class="tag">JSP</span><span class="tag">Ajax</span><span class="tag">KakaoPay API</span><span class="tag">계층형 댓글</span>
-        </div>
-        <ul>
-          <li>결제, 리뷰, 장바구니, 회원/매출 관리 기능 담당</li>
-          <li>비동기 데이터 흐름 이해 및 공통 로직 개선 경험</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2>기술 자기 소개</h2>
+      <h2>📚 교육 과정</h2>
       <p>
-        Java, Spring Boot, MyBatis, JSP, Oracle, React, GitHub, WebSocket, SweetAlert, DHTMLX Gantt 등 다양한 기술을 습득하고 프로젝트에 적용해 본 경험이 있습니다.
-        백엔드 중심이지만 프론트와 기획 영역도 두루 경험하며 실무 감각을 키웠습니다.
+        <strong>전자정부프레임워크 & React 기반 풀스택 개발자 양성과정</strong><br>
+        2024.10 ~ 2025.05 (총 1240시간)<br>
+        기획/설계, ERD, JSP 기반 구현, React 프론트 실습, 실무형 협업 프로젝트 수행
       </p>
     </section>
 
+    <section class="section">
+      <h2>📈 저의 강점</h2>
+      <ul>
+        <li><strong>기획 + 개발 경험의 조화</strong>: 요구사항을 빠르게 분석하고 정확히 구현</li>
+        <li><strong>실행력 있는 협업가</strong>: 팀 완주를 이끄는 실행력과 리더십</li>
+        <li><strong>사용자 중심의 개선 주도</strong>: SPA 구조 설계 및 실시간 알림 경험</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>✨ 앞으로의 목표</h2>
+      <ul>
+        <li>Spring Boot / JSP / React 기반 프로젝트 독립 수행</li>
+        <li>CI/CD, 테스트 코드, SQL 최적화 등 실무 역량 강화</li>
+        <li>3년 내 실전형 백엔드 개발자 → 5년 내 프로젝트 리더(PL)</li>
+      </ul>
+    </section>
+
     <section class="section contact">
-      <h2>연락처</h2>
+      <h2>📬 연락처</h2>
       <p>
         📧 Email: <a href="mailto:decoro1002@gmail.com">decoro1002@gmail.com</a><br>
-        💼 GitHub: <a href="https://github.com/SeongSil-Chae" target="_blank">github.com/SeongSil-Chae</a>
+        💼 GitHub: <a href="https://github.com/SeongSil-Chae" target="_blank">github.com/SeongSil-Chae</a><br>
+        📘 이력서: <a href="https://github.com/SeongSil-Chae/blob/main/2025년_이력서(채성실).pdf" target="_blank">2025년 이력서 PDF 보기</a>
       </p>
     </section>
   </main>
