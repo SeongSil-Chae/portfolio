@@ -3,179 +3,137 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>채성실 - 포트폴리오</title>
+  <title>채성실 - 백엔드 개발자 포트폴리오</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4C+6aZG5v8y5Y9knhk+9lGiV1GsxkVpXG5N3C8OU0x7YoU8T+FfB8NwZ+JzzT1N6jD6Kg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
   <style>
-    body {
-      margin: 0;
-      font-family: 'Montserrat', sans-serif;
-      display: flex;
-      min-height: 100vh;
-    }
-    nav {
-      width: 220px;
-      background-color: #1e1e2f;
-      color: #fff;
-      position: fixed;
-      height: 100%;
-      padding: 40px 20px;
-    }
-    nav h2 {
-      font-size: 1.2rem;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-    nav a {
-      display: block;
-      color: #fff;
-      text-decoration: none;
-      margin: 15px 0;
-      font-weight: 500;
-    }
-    nav a:hover {
-      color: #7dd3fc;
-    }
-    main {
-      margin-left: 240px;
-      padding: 40px;
-      background-color: #f9fafb;
-      flex: 1;
-    }
-    section {
-      margin-bottom: 60px;
-    }
-    h1, h2 {
-      color: #111827;
-    }
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 10px;
-    }
-    .badge-container img {
-      height: 28px;
-      margin: 5px 6px 5px 0;
-    }
-    .project {
-      background: #fff;
-      border: 1px solid #e5e7eb;
-      padding: 20px;
-      border-radius: 8px;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    }
-    .project h3 {
-      margin-top: 0;
-    }
-    .project ul {
-      padding-left: 20px;
-    }
-    .links a {
-      display: inline-block;
-      background-color: #4f46e5;
-      color: #fff;
-      padding: 10px 16px;
-      margin: 10px 10px 0 0;
-      border-radius: 4px;
-      text-decoration: none;
-    }
-    footer {
-      text-align: center;
-      margin-top: 40px;
-      color: #888;
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Montserrat', sans-serif; background-color: #f0f2f5; color: #333; line-height: 1.6; }
+    header { background: linear-gradient(90deg, #667eea, #764ba2); color: #fff; padding: 60px 20px 40px; text-align: center; }
+    header h1 { font-size: 2.8rem; margin-bottom: 10px; }
+    header p { font-size: 1.2rem; opacity: 0.95; max-width: 700px; margin: 0 auto; }
+    .container { max-width: 960px; margin: 0 auto; padding: 40px 20px; background-color: #fff; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); margin-top: -30px; border-radius: 8px; }
+    h2 { font-size: 1.5rem; color: #4f46e5; margin-bottom: 12px; border-bottom: 2px solid #ddd; padding-bottom: 4px; }
+    .section { margin-bottom: 40px; }
+    .stack-group { margin-bottom: 16px; }
+    .stack-title { font-weight: 600; margin-bottom: 6px; color: #444; }
+    .badges { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px; }
+    .badges img { height: 28px; }
+    .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 20px; }
+    .card { background: #f9fafb; border: 1px solid #ddd; border-radius: 8px; padding: 20px; transition: 0.3s ease; }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); }
+    .card h3 { color: #4f46e5; margin-bottom: 10px; font-size: 1.2rem; }
+    .card ul { padding-left: 20px; }
+    .card img { width: 100%; border-radius: 6px; margin-bottom: 10px; }
+    .links { text-align: center; margin-top: 30px; }
+    .links a { display: inline-block; margin: 0 10px; padding: 10px 18px; border-radius: 5px; background-color: #4f46e5; color: #fff; text-decoration: none; font-size: 0.95rem; transition: 0.3s; }
+    .links a:hover { background-color: #372fd0; }
+    footer { text-align: center; padding: 20px; font-size: 0.9rem; color: #777; }
+    .card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 10px;
     }
   </style>
 </head>
 <body>
-  <nav>
-    <h2>채성실 포트폴리오</h2>
-    <a href="#about">소개</a>
-    <a href="#skills">기술 스택</a>
-    <a href="#projects">프로젝트</a>
-    <a href="#contact">연락처</a>
-  </nav>
+  <header>
+    <h1>👋 안녕하세요, 신입 백엔드 개발자 채성실입니다!</h1>
+    <p>8년간 정부지원 IT교육 행정 실무를 총괄하며 <strong>기획력과 실행력</strong>을 쌓아왔고,<br>
+    현재는 실무 중심의 프로젝트 경험을 통해 <strong>개발자로서의 전문성</strong>을 키워가고 있습니다.<br>
+    특히, <strong>그룹웨어 프로젝트</strong>에서 기획부터 개발, UI/UX, 배포까지 전 과정을 경험했습니다.</p>
+  </header>
 
-  <main>
-    <section id="about">
-      <h1>👋 안녕하세요, 신입 백엔드 개발자 <span style="color:#4f46e5; font-weight:700; font-size:2.2rem;">채성실</span>입니다!</h1>
-      <p>8년간 정부지원 IT교육 행정 실무를 총괄하며 <strong>기획력과 실행력</strong>을 쌓아왔고,<br>
-      현재는 실무 중심의 프로젝트 경험을 통해 <strong>개발자로서의 전문성</strong>을 키워가고 있습니다.<br>
-      특히, <strong>그룹웨어 시스템(7FS) 프로젝트</strong>에서 기획부터 개발, UI/UX, 배포까지 전 과정을 경험했습니다.</p>
-    </section>
-
-    <section id="skills">
+  <main class="container">
+    <section class="section">
       <h2>🛠 기술 스택</h2>
-      <div class="badge-container">
-        <p><strong>Backend</strong></p>
-        <img src="https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white"/>
-        <img src="https://img.shields.io/badge/SpringBoot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white"/>
-        <img src="https://img.shields.io/badge/MyBatis-000000?style=for-the-badge&logo=mybatis&logoColor=white"/>
-        <img src="https://img.shields.io/badge/JSP-00599C?style=for-the-badge"/>
-        <p><strong>Frontend</strong></p>
-        <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
-        <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
-        <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
-        <img src="https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white"/>
-        <img src="https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white"/>
-        <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black"/>
-        <p><strong>Database</strong></p>
-        <img src="https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white"/>
-        <img src="https://img.shields.io/badge/SQL Developer-336791?style=for-the-badge"/>
-        <p><strong>Infra & Tools</strong></p>
-        <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/>
-        <img src="https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=notion&logoColor=white"/>
-        <img src="https://img.shields.io/badge/Redmine-B32024?style=for-the-badge"/>
-        <img src="https://img.shields.io/badge/SVN-809CC9?style=for-the-badge"/>
-        <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white"/>
-        <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"/>
-        <p><strong>기타 경험</strong></p>
-        <img src="https://img.shields.io/badge/WebSocket-FF9900?style=for-the-badge"/>
-        <img src="https://img.shields.io/badge/DHTMLX Gantt-2D8EFF?style=for-the-badge"/>
-        <img src="https://img.shields.io/badge/SweetAlert-FFB6C1?style=for-the-badge"/>
-        <img src="https://img.shields.io/badge/Apache POI-4B6EAF?style=for-the-badge"/>
+
+      <div class="stack-group">
+        <div class="stack-title">Backend</div>
+        <div class="badges">
+          <img src="https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white" alt="Java">
+          <img src="https://img.shields.io/badge/SpringBoot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white" alt="Spring Boot">
+          <img src="https://img.shields.io/badge/MyBatis-000000?style=for-the-badge&logo=MyBatis&logoColor=white" alt="MyBatis">
+          <img src="https://img.shields.io/badge/JSP-00599C?style=for-the-badge" alt="JSP">
+        </div>
+      </div>
+
+      <div class="stack-group">
+        <div class="stack-title">Frontend</div>
+        <div class="badges">
+          <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
+          <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
+          <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
+          <img src="https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap">
+          <img src="https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white" alt="jQuery">
+          <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React">
+        </div>
+      </div>
+
+      <div class="stack-group">
+        <div class="stack-title">Database</div>
+        <div class="badges">
+          <img src="https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white" alt="Oracle">
+          <img src="https://img.shields.io/badge/SQL Developer-336791?style=for-the-badge" alt="SQL Developer">
+        </div>
+      </div>
+
+      <div class="stack-group">
+        <div class="stack-title">Infra / Tools</div>
+        <div class="badges">
+          <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+          <img src="https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=notion&logoColor=white" alt="Notion">
+          <img src="https://img.shields.io/badge/Redmine-B32024?style=for-the-badge" alt="Redmine">
+          <img src="https://img.shields.io/badge/SVN-809CC9?style=for-the-badge" alt="SVN">
+          <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white" alt="AWS">
+          <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker">
+        </div>
+      </div>
+
+      <div class="stack-group">
+        <div class="stack-title">기타 경험 기술</div>
+        <div class="badges">
+          <img src="https://img.shields.io/badge/WebSocket-FF9900?style=for-the-badge" alt="WebSocket">
+          <img src="https://img.shields.io/badge/DHTMLX Gantt-2D8EFF?style=for-the-badge" alt="DHTMLX">
+          <img src="https://img.shields.io/badge/SweetAlert-FFB6C1?style=for-the-badge" alt="SweetAlert">
+          <img src="https://img.shields.io/badge/Apache POI-4B6EAF?style=for-the-badge" alt="Apache POI">
+        </div>
       </div>
     </section>
 
-    <section id="projects">
-      <h2>📁 주요 프로젝트</h2>
-
-      <div class="project">
-        <a href="https://seongsil-chae.github.io/GrooBear/" target="_blank">
-          <img src="7fs-thumbnail.png" alt="7FS 썸네일" style="width:100%; max-width:600px; border-radius:8px; margin-bottom:16px;"/>
-        </a>
-        <h3>7FS 그룹웨어 협업 시스템</h3>
-        <ul>
-          <li>5단계 입력폼, 조직도, 파일 업로드 포함 프로젝트 등록/수정</li>
-          <li>업무 계층 구조, 실시간 알림 (WebSocket), 피드백 시스템</li>
-          <li>Gantt 차트(DHTMLX API), Kanban 보드 (Drag&Drop)</li>
-          <li>Ajax 기반 SPA 유사 구조, VO 분리 설계</li>
-        </ul>
-      </div>
-
-      <div class="project">
-        <h3>J가 되고 싶은 P - 여행 계획 사이트</h3>
-        <ul>
-          <li>카카오페이 결제, 리뷰, 장바구니, 회원 및 매출 관리</li>
-          <li>댓글 계층 구조, Ajax 기반 SPA 유사 구조 설계</li>
-          <li>API 응답 흐름 및 설계 구조 학습</li>
-        </ul>
-      </div>
-
-      <div class="links">
-        <a href="https://github.com/SeongSil-Chae" target="_blank">🔗 GitHub 프로필</a>
-        <a href="https://github.com/SeongSil-Chae/GrooBear" target="_blank">🚀 최종 프로젝트 GitHub</a>
+    <section class="section">
+      <h2>📁 프로젝트</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>7FS 그룹웨어 협업 시스템</h3>
+          <ul>
+            <li>5단계 입력폼, 조직도, 파일 업로드 포함 프로젝트 등록, 수정, 삭제 구현 및 목록 구현</li>
+            <li>업무 계층 구조, 실시간 알림 (WebSocket), 피드백 시스템</li>
+            <li>Gantt 차트(DHTMLX API), Kanban 보드 (드래그 앤 드롭)</li>
+            <li>Ajax 기반 SPA 유사 구조, VO 분리 설계</li>
+            <li>대시보드의 프로젝트/업무 통계 시각화</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>J가 되고 싶은 P - 여행 계획 사이트</h3>
+          <ul>
+            <li>카카오페이 결제 연동, 리뷰 게시판, 장바구니, 회원관리 및 신고, 블랙리스트 관리</li>
+            <li>댓글 계층 구조, Ajax 기반 SPA 유사 구조 설계</li>
+            <li>API 응답 흐름 및 설계 구조 학습</li>
+          </ul>
+        </div>
       </div>
     </section>
 
-    <section id="contact">
-      <h2>📬 연락처</h2>
-      <p>Email: decoro1002@gmail.com</p>
-      <p>Phone: 010-3124-2812</p>
-    </section>
-
-    <footer>
-      ⓒ 2025 채성실 · 백엔드 개발자 포트폴리오
-    </footer>
+    <div class="links">
+      <a href="https://github.com/SeongSil-Chae" target="_blank">🔗 GitHub 프로필</a>
+      <a href="https://github.com/SeongSil-Chae/GrooBear" target="_blank">🚀 최종 프로젝트 GitHub</a>
+    </div>
   </main>
+
+  <footer>
+    ⓒ 2025 채성실 · 백엔드 개발자 포트폴리오
+  </footer>
 </body>
 </html>
