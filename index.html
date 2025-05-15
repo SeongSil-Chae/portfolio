@@ -52,35 +52,39 @@
     .section {
       margin-bottom: 40px;
     }
-    ul {
-      padding-left: 20px;
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
     }
-    .project {
-      margin-bottom: 20px;
+    .badges img {
+      height: 28px;
     }
-    .tag {
-      display: inline-block;
-      background-color: #e5e7eb;
-      color: #111827;
-      padding: 4px 8px;
-      border-radius: 4px;
-      font-size: 13px;
-      margin: 3px 5px 3px 0;
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
     }
-    .contact a {
+    .card {
+      background: #f9fafb;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      transition: 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .card h3 {
       color: #4f46e5;
-      text-decoration: none;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
     }
-    .contact a:hover {
-      text-decoration: underline;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-    td, th {
-      padding: 8px;
-      border-bottom: 1px solid #ccc;
+    .card ul {
+      padding-left: 20px;
     }
     footer {
       text-align: center;
@@ -100,86 +104,45 @@
 
   <main class="container">
     <section class="section">
-      <h2>🧑‍💻 주요 프로젝트</h2>
-      <div class="project">
-        <strong>🚀 <a href="https://github.com/SeongSil-Chae/sevenfs-groupware" target="_blank">7FS 그룹웨어 협업 시스템</a></strong>
-        <ul>
-          <li><strong>담당 역할</strong>: 프로젝트 관리 모듈 전담 개발, UI/UX 기획, 구조 설계</li>
-          <li><strong>주요 기능</strong>:
-            <ul>
-              <li>5단계 입력폼, 조직도 연동, 파일 업로드 포함한 프로젝트 등록/수정</li>
-              <li>업무 계층 구조, 피드백 댓글 및 실시간 알림 (WebSocket)</li>
-              <li>Gantt 차트(DHTMLX API), Kanban 보드 (Drag&Drop)</li>
-              <li>SPA 유사 Ajax 구조 설계</li>
-              <li>엑셀 다운로드, 권한별 접근 제어, VO 분리 설계(GanttTaskVO / KanbanTaskVO 등)</li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-
-      <div class="project">
-        <strong>✈️ J가 되고 싶은 P - 여행 계획 사이트</strong>
-        <ul>
-          <li><strong>담당 역할</strong>: 부팀장 / TA, 결제·장바구니·리뷰·회원관리 등 담당</li>
-          <li><strong>기술 경험</strong>: KakaoPay API, 댓글 계층 구조, SPA 유사 Ajax 처리</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2>💼 경력 요약</h2>
-      <table>
-        <tr><th>기간</th><th>소속</th><th>주요 업무</th></tr>
-        <tr><td>2016.10 ~ 2023.05</td><td>SBS아카데미컴퓨터아트학원</td><td>정부지원 사업 기획 및 운영 행정</td></tr>
-        <tr><td>2023.06 ~ 2024.09</td><td>미래융합교육원</td><td>직업훈련 운영 및 기업 협업 기획</td></tr>
-      </table>
-    </section>
-
-    <section class="section">
       <h2>🛠 기술 스택</h2>
-      <ul>
-        <li><strong>Backend</strong>: Java, Spring Boot, MyBatis, JSP</li>
-        <li><strong>Frontend</strong>: HTML5, CSS3, JavaScript, Bootstrap, jQuery, React</li>
-        <li><strong>Database</strong>: Oracle, SQL Developer</li>
-        <li><strong>Infra / Tools</strong>: GitHub, Notion, Redmine, SVN, AWS, Docker</li>
-        <li><strong>기타 경험</strong>: WebSocket, DHTMLX Gantt, SweetAlert, Apache POI (엑셀)</li>
-      </ul>
+      <div class="badges">
+        <img src="https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white" alt="Java">
+        <img src="https://img.shields.io/badge/SpringBoot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white" alt="Spring Boot">
+        <img src="https://img.shields.io/badge/MyBatis-000000?style=for-the-badge&logo=MyBatis&logoColor=white" alt="MyBatis">
+        <img src="https://img.shields.io/badge/JSP-00599C?style=for-the-badge" alt="JSP">
+        <img src="https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white" alt="Oracle">
+        <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
+        <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
+        <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
+        <img src="https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white" alt="jQuery">
+        <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React">
+        <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+        <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white" alt="AWS">
+        <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker">
+      </div>
     </section>
 
     <section class="section">
-      <h2>📚 교육 과정</h2>
-      <p>
-        <strong>전자정부프레임워크 & React 기반 풀스택 개발자 양성과정</strong><br>
-        2024.10 ~ 2025.05 (총 1240시간)<br>
-        기획/설계, ERD, JSP 기반 구현, React 프론트 실습, 실무형 협업 프로젝트 수행
-      </p>
-    </section>
-
-    <section class="section">
-      <h2>📈 저의 강점</h2>
-      <ul>
-        <li><strong>기획 + 개발 경험의 조화</strong>: 요구사항을 빠르게 분석하고 정확히 구현</li>
-        <li><strong>실행력 있는 협업가</strong>: 팀 완주를 이끄는 실행력과 리더십</li>
-        <li><strong>사용자 중심의 개선 주도</strong>: SPA 구조 설계 및 실시간 알림 경험</li>
-      </ul>
-    </section>
-
-    <section class="section">
-      <h2>✨ 앞으로의 목표</h2>
-      <ul>
-        <li>Spring Boot / JSP / React 기반 프로젝트 독립 수행</li>
-        <li>CI/CD, 테스트 코드, SQL 최적화 등 실무 역량 강화</li>
-        <li>3년 내 실전형 백엔드 개발자 → 5년 내 프로젝트 리더(PL)</li>
-      </ul>
-    </section>
-
-    <section class="section contact">
-      <h2>📬 연락처</h2>
-      <p>
-        📧 Email: <a href="mailto:decoro1002@gmail.com">decoro1002@gmail.com</a><br>
-        💼 GitHub: <a href="https://github.com/SeongSil-Chae" target="_blank">github.com/SeongSil-Chae</a><br>
-        📘 이력서: <a href="https://github.com/SeongSil-Chae/blob/main/2025년_이력서(채성실).pdf" target="_blank">2025년 이력서 PDF 보기</a>
-      </p>
+      <h2>📁 프로젝트</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>7FS 그룹웨어 협업 시스템</h3>
+          <ul>
+            <li>5단계 입력폼, 조직도, 파일 업로드 포함 프로젝트 등록/수정</li>
+            <li>업무 계층 구조, 실시간 알림 (WebSocket), 피드백 시스템</li>
+            <li>Gantt 차트(DHTMLX API), Kanban 보드 (드래그 앤 드롭)</li>
+            <li>Ajax 기반 SPA 유사 구조, VO 분리 설계</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>J가 되고 싶은 P - 여행 계획 사이트</h3>
+          <ul>
+            <li>카카오페이 결제, 리뷰, 장바구니, 회원 및 매출 관리</li>
+            <li>댓글 계층 구조, Ajax 기반 SPA 유사 구조 설계</li>
+            <li>API 응답 흐름 및 설계 구조 학습</li>
+          </ul>
+        </div>
+      </div>
     </section>
   </main>
 
